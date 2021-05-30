@@ -60,7 +60,7 @@ class DeviceDataLoader():
 
 class MTSDataset(Dataset):
     def __init__(self, file_name, selectindex, EMDSIZE,wave = 'db4'):
-        x, y, _ = cp.load(open('MTS/' + file_name + '.p', 'rb'), encoding='bytes')
+        x, y, _ = cp.load(open('Dataset/' + file_name + '.p', 'rb'), encoding='bytes')
 
         x = x[selectindex, :, :]
         y = y[selectindex]
